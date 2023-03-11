@@ -1,0 +1,6 @@
+<!DOCTYPE html> <!-- Please note that this source is unlikely to work because adding comments etc. shuffles around the heap state quite a bit. The README will have links to working exploit pages-->
+<!--Korea's code is left out due to it just being offset changes, this is US,EU,JP code-->
+<body>
+	<br><a href="sk3.html" style="font-size:100px;">GO GO!<a/><br> <!--link to the next exploit page-->
+	<img src="data.bmp"/> <!-- this is where a popslide (a nopslide, but with poppc instead of mov r0,r0) + 3ds_browserhax_common payload is (this loads further payloads from the sd that do the brunt of the heavywork getting bhmenu loaded. this will be stack pivoted to from the 3rd page: frame_sk3.html-->
+</body>
