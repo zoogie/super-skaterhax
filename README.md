@@ -82,10 +82,10 @@ A: It's Nintendo's codename for the new3ds browser. It's significantly different
 Q: Will you support Spider (old3ds, old2ds)?<br>
 A: Not for a long while, at least not from me. I'm done with "double patched" browser exploits with a single firmware update. But who knows, there could be others working on old3ds/Spider!
 
-Q: Why is this exploit "sensitive"? 
+Q: Why is this exploit "sensitive"?<br>
 A: The heap shifts around with even the smallest source or runtime change. Comments, 1 byte url length changes, a simple unexpected tap on the screen -- all of this can shift the heap addresses around a few bytes and stop the exploit. This is a big reason why I didn't use my nice "nbhax" menu I used for the previous browser exploits.
 
-Q: What is that image below GO GO! link? 
+Q: What is that image below GO GO! link?<br>
 A: That is a normal .bmp image with nopslide and payload code inserted! Don't touch it -- for office use only!
 
 Q: Where did this browser exploit come from originally?<br>
