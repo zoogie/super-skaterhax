@@ -46,11 +46,11 @@ How to RETRY:
 
 NOTE: 
 - If for any reason you don't land on the "GO GO!" page after after relaunching the browser, use the bookmark you saved to get back there. Then continue on step 4.
-- Some regions may give you an SSL warning before landing on the exploit page on github, just press A to pass these prompts.
+- Some regions may give you an SSL warning before landing on the exploit page on github, just press A to pass these prompts. If you get these, your date/time may be set incorrectly and you should fix it if so.
 
 ## Exploit details
 
-This is a Use-After-Free that occures when an svg mask paints a text selection in a certain test case. The webkit test demo this is based on can be found [here](https://github.com/WebKit/WebKit/blob/main/LayoutTests/svg/masking/mask-should-not-paint-selection.html). Implementation details can be found in comments inside this repo, starting with super/index.html.
+This is a Use-After-Free that occures when an svg mask paints a text selection in a certain test case. The webkit test demo this is based on can be found [here](https://github.com/WebKit/WebKit/blob/main/LayoutTests/svg/masking/mask-should-not-paint-selection.html). Implementation details can be found in comments inside this repo, starting with super/index.html. The repo code is not intended for production, since all of the added comments and stuff have likely uncalibrated my offsets.
 
 ## Troubleshooting (hbmenu)
 
