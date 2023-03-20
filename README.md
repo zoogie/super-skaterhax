@@ -18,7 +18,13 @@ A new3ds (or new2ds) on firmware:<br>
 
 ## Directions (userland)
 
-IMPORTANT: Follow these instructions EXACTLY as this exploit is sensitive to any variance.
+IMPORTANT: Follow these instructions EXACTLY as this exploit is sensitive to any variance.<br>
+
+Here are video directions: https://zoogie.github.io/web/misc_directions/sk3.webm<br>
+QRs and sdmc files needed are here: https://github.com/zoogie/super-skaterhax/releases<br>
+(make sure to place the files as shown from step 0 on your sdmc first!)<br>
+
+OR -- Follow written directions below.<br>
 
 0) Make sure the following 3 files are on the sd card root of your 3ds. Go to the release page to find these files and download them. Open the file go inside the correct region folder of your 3ds to find the below files.
 ```
@@ -30,8 +36,6 @@ sdmc:/boot.3dsx
 ```
 https://zoogie.github.io/web/super (USA,EUROPE,JAPAN)
 https://zoogie.github.io/web/korea (KOREA)
-There is also a QR code to scan (on release page) by pressing the L+R buttons on home menu. 
-This will also take you to the exploit page. It's recommeded to type the url in on the first try, however.
 ```
 2) After reaching the site, it should say "GO GO!" at the top left but press the star on the bottom left instead.
 3) Press "Bookmark this page" then press the bottom-left star again.
@@ -49,7 +53,7 @@ How to RETRY:
 NOTES (for exploit specific issues): 
 - If for any reason you don't land on the "GO GO!" page after after relaunching the browser, use the bookmark you saved to get back there. Then continue on step 4.
 - Some regions may give you an SSL warning before landing on the exploit page on github, just press A to pass these prompts. If you get these, your date/time may be set incorrectly and you should fix it if so.
-- Some users in EUROPE report having to set the language to German (or Deutsch) to get the exploit to work in their region.
+- Some users in EUROPE report having to set the system language to anything but English to get the exploit to work in their region.
 - For extra stubborn crashing scenarios, you may need to reset the browser (deletes bookmarks, history, and cookies - select Google as search engine after reset).
 
 ## Exploit details
