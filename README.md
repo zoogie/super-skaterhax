@@ -26,12 +26,24 @@ QRs and sdmc files needed are here: https://github.com/zoogie/super-skaterhax/re
 
 OR -- Follow written directions below.<br>
 
-0) Make sure the following 3 files are on the sd card root of your 3ds. Go to the release page to find these files and download them. Open the file go inside the correct region folder of your 3ds to find the below files.
+0)<br>
+a. Make sure the following 3 files are on the sd card root of your 3ds. Go to the release page to find these files and download them. Open the file go inside the correct region folder of your 3ds to find the below files <br>
 ```
 sdmc:/arm11code.bin
 sdmc:/browserhax_hblauncher_ropbin_payload.bin
 sdmc:/boot.3dsx
 ```
+b. Set your System Settings Profile Region and Language according to this chart ( -- means "Do Not Set")<br>
+```
+Firm region	Language	Main Region / Subregion
+
+USA		English		United States / --
+EUROPE		English		United Kingdom / --
+KOREA		Korean		Korea / -- (choose first option - there's no selectable main region since Korea is default)
+JAPAN		Japanese	Japan (or 日本)/ -- (choose first option - there's no selectable main region since Japan is default)
+```
+Note: It's a good idea to revert these settings back after you're done with the exploit as they could affect how online features work.
+
 1) Start the browser and type in one of the following URLs:
 ```
 https://zoogie.github.io/web/super (USA,EUROPE,JAPAN)
@@ -50,10 +62,10 @@ How to RETRY:
 0) Relaunch the browser. You should automatically land on the exploit page again (the one with GO GO! link).
 1) Start on step 4 above and continue.
 
-NOTES (for exploit specific issues): 
+Troubleshooting (for exploit specific issues): 
+
 - If for any reason you don't land on the "GO GO!" page after after relaunching the browser, use the bookmark you saved to get back there. Then continue on step 4.
 - Some regions may give you an SSL warning before landing on the exploit page on github, just press A to pass these prompts. If you get these, your date/time may be set incorrectly and you should fix it if so.
-- Some users in EUROPE report having to set the system language to anything but English to get the exploit to work in their region.
 - For extra stubborn crashing scenarios, you may need to reset the browser (deletes bookmarks, history, and cookies - select Google as search engine after reset).
 
 ## Exploit details
