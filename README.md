@@ -13,7 +13,7 @@ Super-skaterhax is yet another primary userland exploit for the new3ds browser, 
 
 A new3ds (or new2ds) on firmware:<br>
 ```
-11.15 - 11.16 on all 4 new3ds regions US,EU,JP,KR
+11.15 - 11.17 on all 4 new3ds regions US,EU,JP,KR
 ```
 
 ## Directions (userland)
